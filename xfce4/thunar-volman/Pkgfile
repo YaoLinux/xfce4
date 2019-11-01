@@ -1,15 +1,15 @@
-# Depends on: libgudev libnotify startup-notification exo xfce4-libui desktop-file-utils gvfs polkit-gnome
+makedepends=(libgudev libnotify startup-notification exo xfce4-libui desktop-file-utils gvfs polkit-gnome)
 
 description="Automatic management of removeable devices in Thunar"
 url="http://goodies.xfce.org/projects/thunar-plugins/thunar-volman"
-packager="greg <greg@nutyx.org>"
-contributors="tyrry,tnut"
+
+packager="Yaolinux Team"
+maintainer="rems"
 
 run=(desktop-file-utils polkit-gnome)
 
 name=thunar-volman
-version=0.8.1
-release=3
+version=0.9.5
 
 source=(http://archive.xfce.org/src/xfce/$name/${version%.*}/$name-$version.tar.bz2 )
 
@@ -18,13 +18,12 @@ build() {
 cd $name-$version
 
 ./configure --prefix=/usr \
-	--sysconfdir=/etc \
-	--libexecdir=/usr/lib/xfce4 \
-    --localstatedir=/var \
-    --disable-static \
-    --disable-debug
-    
+            --sysconfdir=/etc \
+            --libexecdir=/usr/lib/xfce4 \
+            --localstatedir=/var \
+            --disable-static \
+            --disable-debug
+
 make
 make DESTDIR=$PKG install
-
 }
