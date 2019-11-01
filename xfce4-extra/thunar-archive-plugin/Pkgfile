@@ -1,31 +1,27 @@
-# Depends on: thunar xarchiver
+makedepends=(thunar xarchiver)
 
 description="Thunar filemanager plugin to deal with archives"
 url="http://foo-projects.org/~benny/projects/thunar-archive-plugin"
-packager="greg <greg@nutyx.org>"
-contributors="Antonio, bile"
 
-# Group: xfce4
+packager="Yaolinux Team"
+maintainer="rems"
 
 name=thunar-archive-plugin
-version=0.3.1
-release=1
+version=0.4.0
 
 source=(http://archive.xfce.org/src/thunar-plugins/$name/${version%.*}/$name-$version.tar.bz2)
 
-##
 build() {
 cd $name-$version
 
 ./configure	--prefix=/usr \
-		--libexecdir=/usr/lib/thunar \
-		--disable-static \
-		--disable-nls
+            --libexecdir=/usr/lib/thunar \
+            --disable-static \
+            --disable-nls
 
 make
 make DESTDIR=$PKG install
 
-##
 mkdir -p $PKG/usr/lib/thunar/thunar-archive-plugin/
 cat > $PKG/usr/lib/thunar/thunar-archive-plugin/xarchiver.tap << "EOF"
 #!/bin/sh
@@ -57,8 +53,5 @@ extract-to)
 esac
 EOF
 
-##
 chmod 755 $PKG/usr/lib/thunar/thunar-archive-plugin/xarchiver.tap
-
 }
-
