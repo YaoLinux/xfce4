@@ -1,8 +1,9 @@
-# Depends on: intltool xfce4-panel libunique1 hicolor-icon-theme
+makedepends=(intltool xfce4-panel libunique1 hicolor-icon-theme)
 
 description="A notes plugin for the XFCE4 GUI"
 url="http://goodies.xfce.org/projects/panel-plugins/xfce4-notes-plugin"
-packager="tnut <tnut@nutyx.org>"
+
+packager="Yaolinux Team"
 
 name=xfce4-notes-plugin
 version=1.8.1
@@ -12,13 +13,12 @@ source=(http://archive.xfce.org/src/panel-plugins/$name/${version%.*}/$name-$ver
 build() {
   cd $name-$version
 
-  ./configure \
-    --prefix=/usr \
-    --sysconfdir=/etc \
-    --libexecdir=/usr/lib \
-    --localstatedir=/var \
-    --disable-static \
-    --disable-debug
+  ./configure --prefix=/usr \
+              --sysconfdir=/etc \
+              --libexecdir=/usr/lib \
+              --localstatedir=/var \
+              --disable-static \
+              --disable-debug
   make
   make DESTDIR=$PKG install
 }
