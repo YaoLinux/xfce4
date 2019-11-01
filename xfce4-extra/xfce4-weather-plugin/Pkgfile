@@ -1,13 +1,13 @@
-# Depends on: libsoup xfce4-panel
+makedepends=(libsoup xfce4-panel)
 
 description="plugin Weather for Xfce"
 url="http://goodies.xfce.org/projects/panel-plugins/xfce4-weather-plugin"
-packager="greg <greg@nutyx.org>"
-contributors="pierre B"
+
+packager="Yaolinux Team"
+maintainer="rems"
 
 name=xfce4-weather-plugin
-version=0.8.9
-release=1
+version=0.10.0
 
 source=(http://archive.xfce.org/src/panel-plugins/$name/0.8/$name-$version.tar.bz2)
 
@@ -15,16 +15,14 @@ build() {
 
 cd $name-$version
 
-./configure \
---prefix=/usr \
---sysconfdir=/etc \
---libexecdir=/usr/lib \
---localstatedir=/var \
---disable-static \
---disable-debug \
---disable-upower
+./configure --prefix=/usr \
+            --sysconfdir=/etc \
+            --libexecdir=/usr/lib \
+            --localstatedir=/var \
+            --disable-static \
+            --disable-debug \
+            --disable-upower
 
 make
 make DESTDIR=$PKG install
-
 }
