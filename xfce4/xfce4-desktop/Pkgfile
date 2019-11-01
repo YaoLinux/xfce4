@@ -1,9 +1,9 @@
-# Depends on: exo libwnck2 xfce4-libui thunar xfce4-garcon
+makedepends=(exo libwnck2 xfce4-libui thunar xfce4-garcon)
 
 description="A desktop manager for Xfce"
 url="http://www.xfce.org"
-packager="tnut <tnut@nutyx.org>"
-contributors="Tyrry, Tnut, Greg"
+packager="Yaolinux Team"
+maintainer="rems"
 
 run=(gtk-update-icon-cache)
 
