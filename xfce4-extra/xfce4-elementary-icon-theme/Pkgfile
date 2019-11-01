@@ -1,9 +1,10 @@
-# Depends on: gtk-update-icon-cache
+makedepends=(gtk-update-icon-cache)
 
 description="Elementary lefty icons theme"
 url="https://github.com/shimmerproject/elementary-xfce"
-packager="tnut <tnut@nutyx.org>"
-contributor="Greg"
+
+packager="Yaolinux Team"
+maintainer="rems"
 
 name=xfce4-elementary-icon-theme
 version=0.8
