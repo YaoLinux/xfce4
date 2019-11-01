@@ -1,9 +1,10 @@
-# Depends on: gtk2
+makedepends=(gtk2)
 
 description="Xfce Gtk+-2.0 engine and themes"
 url="http://www.xfce.org"
-packager="tnut <tnut@nutyx.org>"
-contributors="Tyrry, Tnut, Greg"
+
+packager="Yaolinux Team"
+maintainer="rems"
 
 name=xfce4-gtk-engine
 _name=gtk-xfce-engine
@@ -16,23 +17,18 @@ build() {
 
 cd ${_name}-$version
 
-  ./configure \
-    --prefix=/usr \
-    --sysconfdir=/etc \
-    --libexecdir=/usr/lib \
-    --localstatedir=/var \
-    --disable-static \
-    --disable-debug
+  ./configure --prefix=/usr \
+              --sysconfdir=/etc \
+              --libexecdir=/usr/lib \
+              --localstatedir=/var \
+              --disable-static \
+              --disable-debug
 
   make
-
- }
+}
  
-  package() {
+package() {
 
   cd ${_name}-$version
   make DESTDIR=$PKG install
-
-  # Obsolet lib
-  rm $PKG//usr/lib/gtk-2.0/2.10.0/engines/libxfce.la
 }
