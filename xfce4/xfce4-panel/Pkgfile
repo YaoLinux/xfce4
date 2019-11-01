@@ -1,13 +1,13 @@
-# Depends on: exo xfce4-garcon libwnck xfce4-libui gtk-doc gtk3
+makedepends=(exo xfce4-garcon libwnck xfce4-libui gtk-doc gtk3)
 
 description="Panel for the Xfce desktop environment."
 url="http://www.xfce.org/"
-packager="greg <greg@nutyx.org>"
-contributors="tyrry,tnut"
+
+packager="Yaolinux Team"
+maintainer="rems"
 
 name=xfce4-panel
-version=4.12.1
-release=1
+version=4.14.1
 
 source=(http://archive.xfce.org/src/xfce/$name/${version%.*}/$name-$version.tar.bz2)
 
@@ -15,18 +15,16 @@ build() {
 
 cd $name-$version
 
-./configure \
-    --prefix=/usr \
-    --sysconfdir=/etc \
-    --libexecdir=/usr/lib \
-    --localstatedir=/var \
-    --disable-static \
-    --enable-gio-unix \
-    --enable-gtk-doc \
-    --enable-gtk3 \
-    --disable-debug
+./configure --prefix=/usr \
+            --sysconfdir=/etc \
+            --libexecdir=/usr/lib \
+            --localstatedir=/var \
+            --disable-static \
+            --enable-gio-unix \
+            --enable-gtk-doc \
+            --enable-gtk3 \
+            --disable-debug
     
 make
 make DESTDIR=$PKG install
-
 }
