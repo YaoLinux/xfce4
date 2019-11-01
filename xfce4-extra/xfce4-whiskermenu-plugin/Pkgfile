@@ -1,13 +1,13 @@
-# Depends on: cmake xfce4-panel
+makedepends=(cmake xfce4-panel)
 
 description="Alternate menu for Xfce4"
 url="http://gottcode.org/xfce4-whiskermenu-plugin/"
-packager="greg <greg@nutyx.org>"
-contributors="tnut"
+
+packager="Yaolinux Team"
+maintainer="rems"
 
 name=xfce4-whiskermenu-plugin
-version=1.7.3
-release=1
+version=2.3.3
 
 source=(http://archive.be.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin/${version%.*}/xfce4-whiskermenu-plugin-$version.tar.bz2)
 
@@ -15,12 +15,10 @@ build() {
 
 cd $name-$version
 
-cmake \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_INSTALL_PREFIX=/usr \
-    -DCMAKE_INSTALL_LIBDIR=lib
+cmake -DCMAKE_BUILD_TYPE=Release \
+      -DCMAKE_INSTALL_PREFIX=/usr \
+      -DCMAKE_INSTALL_LIBDIR=lib
     
 make
 make DESTDIR=$PKG install
-
 }
