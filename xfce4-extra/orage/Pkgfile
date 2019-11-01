@@ -1,9 +1,10 @@
-# Depends on: exo intltool xfce4-panel libnotify 
+makedepends=(exo intltool xfce4-panel libnotify )
 
 description="Calendar for Xfce"
 url="http://www.xfce.org/projects/orage/"
-packager="greg <greg@nutyx.org>"
-contributors="tyrry"
+
+packager="Yaolinux Team"
+maintainer="rems"
 
 name=orage
 _name=orage
@@ -20,13 +21,12 @@ cd ${_name}-$version
 patch -Np1 -i ../libical3.patch
 
 ./configure --prefix=/usr \
-	--sysconfdir=/etc \
-	--libexecdir=/usr/lib \
-	--localstatedir=/var \
-	--enable-libical \
-	--disable-debug
+            --sysconfdir=/etc \
+            --libexecdir=/usr/lib \
+            --localstatedir=/var \
+            --enable-libical \
+            --disable-debug
 
 	make
 	make DESTDIR=$PKG install
-
 }
