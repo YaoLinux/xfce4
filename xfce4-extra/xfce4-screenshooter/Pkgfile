@@ -7,11 +7,13 @@ packager="Yaolinux Team"
 maintainer="rems"
 
 name=xfce4-screenshooter
-version=1.9.6
+version=1.9.7
 
 source=(http://archive.xfce.org/src/apps/$name/1.9/$name-$version.tar.bz2)
 
 build() {
+
+find / -name *.la -print -delete
 
 cd $name-$version
 
