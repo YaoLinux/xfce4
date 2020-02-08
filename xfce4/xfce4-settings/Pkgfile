@@ -9,12 +9,14 @@ maintainer="rems"
 run=(gnome-icon-theme)
 
 name=xfce4-settings
-version=4.14.1
+version=4.14.2
 
 source=(http://archive.xfce.org/src/xfce/${name}/${version%.*}/$name-$version.tar.bz2 
 		default-xsettings-xml.patch)
 
 build() {
+
+find / -name *.la -print -delete
 
 cd $name-$version
 
