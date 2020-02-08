@@ -9,13 +9,15 @@ maintainer="rems"
 run=(desktop-file-utils gtk-update-icon-cache)
 
 name=thunar
-version=1.8.9
+version=1.8.12
 
-source=(http://archive.xfce.org/src/xfce/thunar/${version%.*}/Thunar-$version.tar.bz2)
+source=(https://archive.xfce.org/src/xfce/$name/${version%.*}/$name-$version.tar.bz2)
 
 build() {
 
-cd Thunar-$version
+find / -name *.la -print -delete
+
+cd $name-$version
 
 ./configure \
     --prefix=/usr \
@@ -35,7 +37,4 @@ cd Thunar-$version
     
 make
 make DESTDIR=$PKG install
-
-sed -i 's:x-directory/gnome-default-handler;::' \
-    $PKG/usr/share/applications/Thunar-folder-handler.desktop
 }
