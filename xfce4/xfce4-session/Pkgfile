@@ -11,6 +11,7 @@ run=(udisks2 upower polkit xorg-xrdb xorg-iceauth)
 name=xfce4-session
 version=4.14.1
 release=2
+release=2
 
 source=(http://archive.xfce.org/src/xfce/$name/${version%.*}/$name-$version.tar.bz2
         source-system-xinitrc-scripts.patch
@@ -23,7 +24,6 @@ cd $name-$version
 # https://bugzilla.xfce.org/show_bug.cgi?id=15440
   patch -Np1 -i ../source-system-xinitrc-scripts.patch
 
-find / -name *.la -print -delete
 
 ./configure --prefix=/usr \
             --sysconfdir=/etc \
