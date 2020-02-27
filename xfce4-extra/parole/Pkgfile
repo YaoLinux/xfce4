@@ -8,11 +8,11 @@ maintainer="rems"
 
 name=parole
 version=1.0.5
+release=2
 
 source=(http://archive.xfce.org/src/apps/parole/${version%.*}/parole-$version.tar.bz2)
 
 prepare() {
 
-find / -name *.la -print -delete
 
 }
