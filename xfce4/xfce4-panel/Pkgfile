@@ -8,12 +8,12 @@ maintainer="rems"
 
 name=xfce4-panel
 version=4.14.3
+release=2
 
 source=(http://archive.xfce.org/src/xfce/$name/${version%.*}/$name-$version.tar.bz2)
 
 build() {
 
-find / -name *.la -print -delete
 
 cd $name-$version
 
