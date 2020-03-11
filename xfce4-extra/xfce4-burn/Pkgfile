@@ -10,18 +10,11 @@ run=(cdrdao)
 
 name=xfce4-burn
 _name=xfburn
-version=0.6.1
-release=2
+version=0.6.2
 
 source=(http://archive.xfce.org/src/apps/xfburn/${version%.*}/xfburn-$version.tar.bz2)
 
-build() {
+prepare() {
 
-
-cd ${_name}-$version	
-
-./configure --prefix=/usr
-
-make
-make DESTDIR=$PKG install
+mv ${_name}-$version $name-$version
 }
