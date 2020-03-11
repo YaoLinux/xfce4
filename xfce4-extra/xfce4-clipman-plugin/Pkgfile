@@ -8,7 +8,7 @@ maintainer="rems"
 
 
 name=xfce4-clipman-plugin
-version=1.4.3
+version=1.4.4
 
 source=(http://archive.xfce.org/src/panel-plugins/$name/${version%.*}/$name-$version.tar.bz2)
 
