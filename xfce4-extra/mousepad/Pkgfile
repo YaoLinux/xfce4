@@ -1,4 +1,4 @@
-makedepends=(dbus-glib startup-notification xorg-libxrandr xorg-libxinerama xorg-libsm desktop-file-utils gtksourceview)
+makedepends=(dbus-glib startup-notification xorg-libxrandr xorg-libxinerama xorg-libsm desktop-file-utils gtksourceview xfce4-conf)
 
 description="Mousepad is a simple GTK+ text editor for the Xfce desktop environment."
 url="http://www.xfce.org/projects/mousepad/"
