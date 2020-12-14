@@ -8,7 +8,7 @@ maintainer="rems"
 
 
 name=xfce4-cpufreq-plugin
-version=1.2.1
+version=1.2.2
 
 source=(http://archive.xfce.org/src/panel-plugins/$name/${version%.*}/$name-$version.tar.bz2)
 
