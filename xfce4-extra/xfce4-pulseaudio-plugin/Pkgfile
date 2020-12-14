@@ -6,7 +6,7 @@ url="https://goodies.xfce.org/projects/panel-plugins/xfce4-pulseaudio-plugin"
 packager="Yaolinux Team"
 
 name=xfce4-pulseaudio-plugin
-version=0.4.2
+version=0.4.3
 
 run=(gtk-update-icon-cache pavucontrol)
 
