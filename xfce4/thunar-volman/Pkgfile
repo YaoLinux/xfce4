@@ -9,7 +9,7 @@ maintainer="rems"
 run=(desktop-file-utils polkit-gnome)
 
 name=thunar-volman
-version=0.9.5
+version=4.16.0
 
 source=(http://archive.xfce.org/src/xfce/$name/${version%.*}/$name-$version.tar.bz2 )
 
