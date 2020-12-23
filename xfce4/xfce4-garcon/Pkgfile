@@ -8,10 +8,9 @@ maintainer="rems"
 
 name=xfce4-garcon
 _name=garcon
-version=0.6.4
-release=2
+version=0.8.0
 
-source=(http://archive.xfce.org/src/xfce/garcon/0.6/${_name}-$version.tar.bz2)
+source=(http://archive.xfce.org/src/xfce/garcon/${version:0:3}/${_name}-$version.tar.bz2)
 		
 build() {
 
