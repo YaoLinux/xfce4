@@ -9,8 +9,7 @@ maintainer="rems"
 run=(gnome-icon-theme)
 
 name=xfce4-settings
-version=4.14.3
-release=2
+version=4.16.0
 
 source=(http://archive.xfce.org/src/xfce/${name}/${version%.*}/$name-$version.tar.bz2 
 		default-xsettings-xml.patch)
