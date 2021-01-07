@@ -9,7 +9,7 @@ maintainer="rems"
 run=(desktop-file-utils gtk-update-icon-cache)
 
 name=thunar
-version=4.16.0
+version=4.16.1
 
 source=(https://archive.xfce.org/src/xfce/$name/${version%.*}/$name-$version.tar.bz2)
 
