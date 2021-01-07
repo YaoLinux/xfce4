@@ -7,7 +7,7 @@ packager="Yaolinux Team"
 maintainer="rems"
 
 name=xfce4-datetime-plugin
-version=0.8.0
+version=0.8.1
 
 source=(http://archive.xfce.org/src/panel-plugins/$name/${version:0:3}/$name-$version.tar.bz2)
 
